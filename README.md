@@ -1,6 +1,6 @@
 # force-graph
 
-Force directed graph visualization using [D3.js](https://github.com/d3/d3).
+Force directed graph implementation using [D3.js](https://github.com/d3/d3).
 
 ![neo4j browser screenshot](./.github/ForceLayout.png)
 
