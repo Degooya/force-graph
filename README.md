@@ -8,7 +8,7 @@ Force directed graph visualization using [D3.js](https://github.com/d3/d3).
 
 #### Fix
 
-* bend multiple relationships for the same target
+* bend multiple relationships if they have the same target
 * bend relationship if source & target is the same
 
 #### implement
