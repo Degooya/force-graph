@@ -1,6 +1,6 @@
 # force-graph
 
-/* TODO::  
+TODO::  
 
 Modules
 React
@@ -27,25 +27,7 @@ onGraphChange ?
 
 include feature for neo4j 
 
-add option style like: 
-
-style: node: {
-      diameter: '50px',
-      color: '#A5ABB6',
-      'border-color': '#9AA1AC',
-      'border-width': '2px',
-      'text-color-internal': '#FFFFFF',
-      'font-size': '10px'
-    },
-    relationship: {
-      color: '#A5ABB6',
-      'shaft-width': '1px',
-      'font-size': '8px',
-      padding: '3px',
-      'text-color-external': '#000000',
-      'text-color-internal': '#FFFFFF',
-      caption: '<type>'
-    }
+add option 'style' 
 
 -----------------
 
@@ -68,5 +50,3 @@ same source + target
 neo4j url angeben
 
 Try and Catch errors
-
-*/
