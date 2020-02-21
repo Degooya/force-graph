@@ -6,12 +6,12 @@ Force directed graph visualization using [D3.js](https://github.com/d3/d3).
 
 ## To-Do List
 
-### Fix
+#### Fix
 
 * bend multiple relationships for the same target
 * bend relationship if source & target is the same
 
-### implement
+#### implement
 
 * zoom fit graph 
 * add icons and images to nodes
@@ -23,7 +23,7 @@ Force directed graph visualization using [D3.js](https://github.com/d3/d3).
 * choose which property for color, label & icon
 * add options for fontsize, color, padding etc.
 
-### Refactor
+#### Refactor
 
 * set up Webpack Dev Server
 * split everything in modules
