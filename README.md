@@ -4,7 +4,7 @@ Force directed graph visualization using [D3.js](https://github.com/d3/d3).
 
 ![neo4j browser screenshot](./.github/ForceLayout.png)
 
-## ToDo
+### ToDo
 
 * zoom fit graph 
 * add icons and images to nodes
@@ -25,7 +25,7 @@ Force directed graph visualization using [D3.js](https://github.com/d3/d3).
 * implement unit-tests
 
 
-## Fix
+### Fix
 
 * bend multiple relationships for the same target
 * bend relationship if source & target is the same
