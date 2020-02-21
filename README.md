@@ -1,52 +1,31 @@
 # force-graph
 
-TODO::  
+Force directed graph visualization using [D3.js](https://github.com/d3/d3).
 
-Modules
-React
-Typesript
+![neo4j browser screenshot](./.github/ForceLayout.png)
 
-Features:
+## ToDo
 
-Zoom button on/off
-info
-toolbar
+* zoom fit graph 
+* add icons and images to nodes
+* add zoom button 
+* show node and relationship properties
+* add contexmenu 
+* pin Nodes
+* show every path, or only the shortest path between two nodes
+* choose which property for color, label & icon
+* add options for fontsize, color, padding etc.
 
-Icon 
-Images
-chose property for color
+`Refactor`
 
-zoomfit
-
-Filter
-shortest path
-highlight
-search?
-
-onGraphChange ?
-
-include feature for neo4j 
-
-add option 'style' 
-
------------------
-
-FIXME: 
-
-MVP:
-
-Change class names 
-
-options: scaleExtent, arrowthiknis, colors, icons, nodeRadius, relationshipColor, zoomFit, overlay color
-Text
+* set up Webpack Dev Server
+* split everything in modules
+* use React
+* use Typescript
+* implement unit-tests
 
 
-** which text for Relationship and Node, how to Group**
+## Fix
 
-Version 2: 
-
-multiple relationships
-same source + target
-neo4j url angeben
-
-Try and Catch errors
+* bend multiple relationships for the same target
+* bend relationship if source & target is the same
