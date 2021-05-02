@@ -1,0 +1,463 @@
+body, html, main, .neo4jd3 {
+    height: 100%;
+    overflow: hidden;
+}
+
+.base-bs {
+	opacity: 1;
+}
+
+.content{
+    height: 100%;
+}
+
+.aside{
+    padding-left: 35px;
+    display: block;
+}
+
+.filter-facets{
+    margin: 30px 50px 50px 0px;
+    flex: 0 0 auto;
+    position: relative;
+    align-self: unset;
+    top: unset;
+    width: 15em;
+}
+
+ /* zoom */
+
+.zoom{
+    top: 30px;
+    z-index: 7;
+    position: absolute;
+    left: 30px;
+    list-style: none;
+    background-color: #f8f8f8;
+    border-radius: 2.5px;
+    border: 1px solid #e4e4e4;
+    box-shadow: 3px 4px 9px 0px #32313c14;
+}
+
+.zoom-in {
+    border-bottom: 1px solid #dedede;
+}
+
+.nav-zoom{
+    display: block;
+    padding: 10px 9px;
+    margin-bottom: 0;
+    color: #666;
+    cursor: pointer;
+    outline: none;
+}
+
+.nav-zoom i{
+    display: block;
+    font-size: 13px;
+}
+
+
+.nav-zoom:hover {
+    color: #333;
+}
+
+/*  */
+
+ .search-flex{
+    padding: 20px 50px;
+    background: #f8f8f8;
+}
+
+.search-container{
+    width: 100%;
+    max-width: 1350px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.search-bar{
+    width: 50%;
+    position: relative;
+}
+
+.select-search{
+    font-size: 1rem;
+    padding: 10px 40px 10px 25px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color: #495057;
+    line-height: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: inset 0 0.25rem 0.125rem 0 rgba(0,0,0,0.05);
+    border-radius: .25rem;
+    border: .125rem solid #dee2e6;
+    width: 100%;
+    transition: all .1s ease-in-out;
+}
+
+
+.select-search:focus {
+    outline: none;
+    background-color: #fefefe;
+    border: solid .125rem #d4d4d4;
+    transition: all .1s ease-in-out;
+    box-shadow: inset 0 0.25rem 0.125rem 0 rgba(0,0,0,0.065);
+}
+
+.search-icon{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    opacity: .15;
+    position: absolute;
+    right: 1.1rem;
+    font-size: 18px;
+}
+
+.select-sw-type{
+    padding: 0px 9px;
+    height: 32px;
+    font-size: 13px;
+    border: 1px solid #dedede;
+}
+
+::placeholder { 
+    opacity: .5;
+    font-weight: 700;
+}
+
+.searchresults {
+    width: 100%;
+    background: white;
+    color: #484848;
+    font-size: 13px;
+    line-height: 1.4;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: solid 0.1px rgba(0, 0, 0, .18);
+    border-top-width: 0px;
+    border-bottom-left-radius: 4.4px;
+    border-bottom-right-radius: 4.4px;
+    position: absolute;
+    z-index: 5;
+    box-shadow: 1px 0.8rem 2rem 1px rgba(0, 0, 0, 0.13);
+}
+
+.searchresults-list{
+    list-style: none;
+    outline: none;
+}
+
+.searchresults-rows {
+    font-size: .94rem;
+    padding: 17px 25px 10px 25px;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    color: #495057;
+    line-height: 1;
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: .5px solid #eeeeee;
+}
+
+.searchresults-rows:hover, .selected{
+    Background: #5394c6;
+    color: white;
+}
+
+.searchresults-rows:last-child{
+    border-bottom: none;
+}
+/* -- */
+
+.neo4jd3{
+    position: relative;
+}
+
+.neo4jd3-graph{
+	cursor: all-scroll;
+}
+
+.node .ring {
+	stroke-width: 15px;
+	width: 60px;
+    height: 60px;
+    opacity: 0;
+    stroke: #000;
+}
+
+.node:hover .ring{
+    opacity: .1;
+}
+
+.node .noutline {
+    cursor: pointer;
+    fill: #a5abb6;
+    pointer-events: all;
+    stroke: #9aa1ac;
+	stroke-width: 3px;
+	width: 60px;
+	height: 60px;
+}
+
+.relationship:hover .overlay {
+    opacity: 0.1;
+}
+
+.relationship .overlay {
+    cursor: default;
+    opacity: 0;
+}
+
+.relationship .overlay.rel{
+    fill: #d4d4d4;
+}
+
+.node .icon {
+    color: white;
+    font-size: 4px;
+    text-align: center;
+}
+.node .outline{
+	stroke-width:3;
+}
+
+.relationship .outline{
+    stroke: none;
+    fill: #a5abb6;
+}
+
+.relationship .outline.interface{
+    stroke: #525252;
+    fill: #fff;
+}
+
+.relationship .text{
+    pointer-events: none;
+    text-anchor: middle;
+    font-family: "Open Sans";
+    fill: #000000;
+}
+
+.nodetext{
+    font-size: 8.5px;
+    font-weight: 600;
+    pointer-events: none;
+    text-anchor: middle;
+    font-family: "Open Sans";
+    fill: #000000;
+}
+
+.prefix{
+    fill: #8c8c8c;
+}
+
+.g-tooltip {
+	color: #fff;
+	font-size: 11px;
+    position: absolute;
+    white-space: nowrap;
+	-webkit-font-smoothing: antialiased;
+}
+
+.g-tooltip-path {
+    fill: #000;
+	fill-opacity: .7;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.g-tooltip .g-name {
+    font-weight: bold;
+}
+
+.g-tooltip {
+    color: #fff;
+    position: absolute;
+    white-space: nowrap;
+    -webkit-font-smoothing: antialiased;
+}
+
+.neo4jd3-info {
+    font-size: 11px;
+}
+
+.neo4jd3-info a {
+    display: inline-block;
+    font-size: 12.5px;
+    line-height: 1.428571429;
+    padding: 6px 12px;
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.neo4jd3-info a.class {
+    color: #fff;
+    width: unset;
+    border-radius: 99px;
+    padding: 2px 12px 2px 12px;
+    margin-bottom: 4px;
+}
+
+.neo4jd3-info a.property {
+    background-color: #fbfbfb;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 0.07rem 0.125rem 0 rgba(0,0,0,.1);
+    margin-bottom: -2px;
+    border-radius: 3px;
+}
+
+.neo4jd3-info a.btn {
+    margin-left: 5px;
+    margin-top: 5px;
+    opacity: 1
+}
+
+.neo4jd3-info a.info {
+    background-color: #a5abb6;
+    border: 1px solid #9aa1ac;
+    color: #fff
+}
+
+.filter-list-link{
+    color: #8a8a8a;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 7px 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .15s ease-in;
+    background: #f8f8f8;
+}
+
+.filter-list-link:hover{
+    background: #eaeaea;
+    color: #6f6e6e;
+	transition: all .15s ease-in;
+}
+
+.sidebar-chevron{
+    float: right;
+    height: 100%;
+    font-size: 11px;
+    padding-top: 2px;
+    transform: rotate(0deg);
+    transition: transform .25s;
+}
+
+.filter-menu:first-child{
+    padding-top: 17px;
+}
+
+
+.filter-menu:last-child{
+    padding-bottom: 10px;
+}
+
+.main-menu-list-item-selected .sidebar-chevron {
+    transform: rotate(-180deg);
+    transition: transform .25s;
+}
+
+.filter-ul {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease-out,opacity .3s;
+}
+
+.main-menu-list-item-selected .filter-ul {
+    max-height: calc(100vh - 360px);
+    opacity: 1;
+    transition: max-height .6s ease-out,opacity .3s;
+}
+
+.main-menu-list-item-selected .ul-info{
+    overflow-y: auto;
+}
+
+.tippy-tooltip.tippy-theme .tippy-backdrop {
+    background: #fff;
+  }
+
+.tippy-theme{
+    border-radius: 5.5px;
+    padding: 0px;
+    background: #fff;
+}
+
+
+.tippy-li{
+    padding: 9.5px 39px;
+    cursor: pointer;
+    display: flex;
+    border-bottom: 1px solid #efefef;
+    white-space: nowrap;
+    -webkit-transition: all .05s ease-in;
+    transition: all .05s ease-in;
+}
+
+.tippy-li:last-child{
+    border-bottom: none;
+}
+
+.tippy-i{
+    color: #686868;
+    transition: all 0.25s ease-in-out;
+    order: -1;
+    font-size: 14px;
+    margin-top: 3px;
+    margin-right: 10.5px;
+}
+
+.tippy-li-title{
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #26323d;
+}
+
+.tippy-li:hover {
+    background: #efefef;
+    -webkit-transition: all .05s ease-in;
+    transition: all .05s ease-in;
+    color: #000;
+}
+
+.tippy-li-active{
+    background-color: #438ee9;
+    color: white;
+}
+
+.tippy-li-active .tippy-i{
+    color: white;
+}
+
+.tippy-li-active .tippy-li-title{
+    color: white;
+}
+
+.tippy-li-active:hover {
+    box-shadow: inset 0 0.25rem 0.125rem 0 rgba(0, 0, 0, .13);
+    background: #438ee9;
+    transition: box-shadow 0.1s ease-in-out;
+    color: white;
+}
+
+.tippy-popper[x-placement^=top] .tippy-arrow{
+    border-top: 7px solid #fff;
+}
