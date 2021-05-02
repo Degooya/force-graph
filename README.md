@@ -101,4 +101,4 @@ directedGraph.drawGraph(d3Data);
 
 ## Copyright and license
 
-Copyright (C) 2021 Robert Rieser
+Copyright (C) 2021. Code released under the [GNU General Public License](LICENSE).
