@@ -20,7 +20,6 @@ export default function DirectedGraph(_selector, _options) {
     g,
     svgNodes,
     svgRelationships,
-    highlight,
     classes2colors = {},
     numClasses = 0;
 
@@ -28,7 +27,7 @@ export default function DirectedGraph(_selector, _options) {
     arrowSize: 7.5,
     relationshipWidth: 1.5,
     nodeRadius: 23,
-    zoomScale: undefined, //TODO:
+    zoomScale: [0.1, 10],
     colors: {},
     icons: {},
     nodeCaption: true,
@@ -86,11 +85,11 @@ export default function DirectedGraph(_selector, _options) {
   //---
 
   function zoom() {
-    return d3.zoom().scaleExtent([0.2, 1]).on("zoom", zoomed);
+    return d3.zoom().scaleExtent(options.zoomScale).on("zoom", zoomed);
   }
 
   function transform() {
-    return d3.zoomIdentity.translate(0, 0).scale(1);
+    return d3.zoomIdentity.translate(0, 0).scale(2);
   }
 
   function updateContent(n, r) {
@@ -704,12 +703,12 @@ export default function DirectedGraph(_selector, _options) {
           "charge",
           d3
             .forceManyBody()
-            .strength(-600)
-            .distanceMax(400)
+            .strength(-180)
+            .distanceMax(500)
             .distanceMin(options.nodeRadius * 3.5)
         )
-        //.alphaDecay(0.01)
-        //.alphaTarget(1)
+        .alphaDecay(0.01)
+        .alphaTarget(1)
         .on("tick", function () {
           tick();
         })
@@ -1119,7 +1118,7 @@ export default function DirectedGraph(_selector, _options) {
       });
 
     nenter.merge(n).html(function (d) {
-      return options.nodeCaption ? `${d.labels}` : "";
+      return options.nodeCaption ? `${d.labels[0]}` : "";
     });
   }
 
