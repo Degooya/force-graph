@@ -81,7 +81,7 @@ directedGraph.drawGraph(d3Data);
     "relationships": [
         {
             "id": "7",
-            "type": "DEVELOPES",
+            "type": "DEVELOPS",
             "startNode": "1",
             "endNode": "8",
             "properties": {
