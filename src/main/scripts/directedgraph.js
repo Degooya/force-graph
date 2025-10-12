@@ -135,8 +135,7 @@ export default class DirectedGraph {
             .attr("width", "100%")
             .attr("height", "100%")
             .attr("class", "directed-graph")
-            .call(this.zoom())
-            .on("dblclick.zoom", null);
+            .call(this.zoom());
 
         this.g = this.svg.append("g")
             .attr("width", "100%")
